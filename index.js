@@ -43,10 +43,8 @@ for (let i = 0; i < 10; i++) {
     fileName: `0${i + 1}.jpeg`,
   });
   try {
-    const { filePath, downloadStatus } = await downloader.download();
+    await downloader.download();
 
     console.log(`0${i + 1} is done`);
-  } catch (error) {
-    //console.log('Download failed', error);
-  }
+  } catch (error) {}
 }

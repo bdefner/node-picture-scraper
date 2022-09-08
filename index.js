@@ -40,11 +40,11 @@ for (let i = 0; i < 10; i++) {
   const downloader = new Downloader({
     url: urls[i],
     directory: './memes', // This folder will be created, if it doesn't exist.,
-    fileName: `0${i + 1}.jpeg`,
+    fileName: i < 9 ? `0${i + 1}.jpeg` : `${i + 1}.jpeg`,
   });
   try {
     await downloader.download();
 
-    console.log(`0${i + 1} is done`);
+    console.log(i < 9 ? `0${i + 1} is done` : `${i + 1} is done`);
   } catch (error) {}
 }

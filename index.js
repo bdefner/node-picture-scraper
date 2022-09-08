@@ -45,6 +45,6 @@ for (let i = 0; i < 10; i++) {
   try {
     await downloader.download();
 
-    console.log(i < 9 ? `0${i + 1} is done` : `${i + 1} is done`);
+    console.log(i < 9 ? `0${i + 1} / 10 is done` : `${i + 1} / 10 is done`);
   } catch (error) {}
 }
